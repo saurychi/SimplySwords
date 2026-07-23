@@ -1421,6 +1421,8 @@
   "text.autoconfig.simplyswords_main.option.general.weaponImpactSoundsVolume":                                          "Weapon impact sounds volume",
   "text.autoconfig.simplyswords_main.option.general.enableWeaponFootfalls":                                             "Enable weapon footfalls",
   "text.autoconfig.simplyswords_main.option.general.enablePassiveParticles":                                            "Enable passive particles",
+  "text.autoconfig.simplyswords_main.option.general.giveRunicGrimoireOnFirstJoin":                                      "Give Runic Grimoire on first join",
+  "text.autoconfig.simplyswords_main.option.general.giveRunicGrimoireOnFirstJoin.@Tooltip":                             "Give new players the Runic Grimoire when they first join. Requires Patchouli.",
   "text.autoconfig.simplyswords_main.option.general.enableUniqueGemSockets.@Tooltip" :                                  "If disabled, gem slots will no longer appear on freshly generated Unique weapons. Not retroactive.",
   "text.autoconfig.simplyswords_main.option.general.enableUniqueGemSockets":                                            "Enable Unique gem sockets",
   "text.autoconfig.simplyswords_main.option.general.compatGobberEndWeaponsUnbreakable":                                 "§a[Compat]§7 Enable Gobber unbreakable End weapons",

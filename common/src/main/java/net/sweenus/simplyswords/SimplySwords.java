@@ -32,6 +32,7 @@ import net.sweenus.simplyswords.config.*;
 import net.sweenus.simplyswords.entity.BattleStandardDarkEntity;
 import net.sweenus.simplyswords.entity.BattleStandardEntity;
 import net.sweenus.simplyswords.entity.SimplySwordsBeeEntity;
+import net.sweenus.simplyswords.event.FirstJoinBookHandler;
 import net.sweenus.simplyswords.registry.EffectRegistry;
 import net.sweenus.simplyswords.registry.EntityRegistry;
 import net.sweenus.simplyswords.registry.ItemsRegistry;
@@ -118,6 +119,7 @@ public class SimplySwords {
         EntityAttributeRegistry.register(EntityRegistry.BATTLESTANDARDDARK, BattleStandardDarkEntity::createBattleStandardDarkAttributes);
         EntityAttributeRegistry.register(EntityRegistry.SIMPLYBEEENTITY, SimplySwordsBeeEntity::createSimplyBeeAttributes);
         ModLootTableModifiers.init();
+        FirstJoinBookHandler.init();
         if (passVersionCheck("eldritch_end", minimumEldritchEndVersion)) {
             EldritchEndCompat.registerModItems();
             EldritchEndCompatRegistry.EFFECT.register();
