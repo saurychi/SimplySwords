@@ -19,11 +19,13 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
+    // Use the shared file directly so this also works with --configure-on-demand,
+    // where the common project's Loom extension may not have been evaluated yet.
+    accessWidenerPath = file("../common/src/main/resources/simplyswords.accesswidener")
 
     forge {
         convertAccessWideners = true
-        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
+        extraAccessWideners.add "simplyswords.accesswidener"
 
         mixinConfig "simplyswords-common.mixins.json"
         mixinConfig "simplyswords.mixins.json"
@@ -87,6 +89,7 @@ jar {
 }
 
 sourcesJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources
     from commonSources.archiveFile.map { zipTree(it) }

@@ -8,7 +8,8 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
+    // Avoid querying the common project's Loom extension before it is configured.
+    accessWidenerPath = file("../common/src/main/resources/simplyswords.accesswidener")
 }
 
 configurations {
@@ -104,6 +105,7 @@ jar {
 }
 
 sourcesJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources
     from commonSources.archiveFile.map { zipTree(it) }
